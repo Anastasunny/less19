@@ -4,7 +4,7 @@ const HomePage = require('../app/objects/pages/homePage')
 const ApiPage = require('../app/objects/pages/apiPage')
 
 
-describe('Protractor Demo App', function() {
+describe('Testing Protractor site', function() {
 
     it('Logo exisits + GitHub button is clickable', async function() {
         let homePage = new HomePage();
@@ -48,7 +48,7 @@ describe('Protractor Demo App', function() {
         browser.wait(protractor.ExpectedConditions.urlContains('https://github.com/angular/protractor/blob/master/lib/config.ts'), 2000);
     });
 
-    it('Protractor API tests', async function() {
+    it('Protractor API list contains methods', async function() {
         let apiPage = new ApiPage();
 
         await apiPage.open('#/api');
